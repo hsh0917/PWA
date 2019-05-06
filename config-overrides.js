@@ -9,7 +9,13 @@ module.exports = function override(config, env) {
         swSrc: './src/sw.js',
         swDest: 'service-worker.js',
         clientsClaim: true,
-        skipWaiting: true,  
+        skipWaiting: true,
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [{
+          fetchOptions: {
+            mode: 'no-cors',
+          }
+        }]
       })
     }
     return plugin
