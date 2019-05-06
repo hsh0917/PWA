@@ -4,9 +4,10 @@
     height: 78vh;
     margin-bottom: 15px;
     display:block;
-    @media screen and (max-width: $break-small) and (max-width: $break-large) {
-    overflow: scroll;
-    }
+
+    @media screen and (max-width: 630px) {
+        overflow: scroll;
+        }
 
     h2{
         text-align: center;

@@ -31,6 +31,9 @@
         @media screen and (max-width: $break-small) {
             left: 10px;
         }
+        @media screen and (max-width: $break-smallMedium) and (min-width: $break-small) {
+            left: 12px;
+        }
     }
     
     .healthchart_icon_sad{
@@ -39,6 +42,9 @@
         left: -5px;
         @media screen and (max-width: $break-small) {
             left: -12px;
+        }
+        @media screen and (max-width: $break-smallMedium) {
+            left: -14px;
         }
     }
     .fa-frown.fa-2x, .fa-grin-beam.fa-2x {
