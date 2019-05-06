@@ -8,14 +8,22 @@ module.exports = function override(config, env) {
       return new WorkboxWebpackPlugin.InjectManifest({
         swSrc: './src/sw.js',
         swDest: 'service-worker.js',
-        skipWaiting: true,
-        cleanupOutdatedCaches: true,
-        runtimeCaching: [{
-          fetchOptions: {
-            mode: 'no-cors',
-          }
-        }]
       })
+      // ,
+      // new WorkboxWebpackPlugin.GenerateSW({ 
+      //   clientsClaim: true,
+      //   skipWaiting: true,
+      //   cleanupOutdatedCaches: true,
+      //   runtimeCaching: [{
+      //     urlPattern: /static/,
+      //     handler: 'NetworkFirst',
+      //     options: {
+      //       fetchOptions: {
+      //           mode: 'no-cors',
+      //         }
+      //     }
+      //   }]
+      // })
     }
     return plugin
   })

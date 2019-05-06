@@ -1,7 +1,10 @@
-importScripts("http://localhost:5000/precache-manifest.4b1b111d78b14063abbd82810f089e79.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("http://localhost:5000/precache-manifest.92ff8a9746467ecc686301200f6e2118.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
-
-
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 workbox.routing.registerRoute(
   new RegExp('https:.*min\.(css|js|html)'),
