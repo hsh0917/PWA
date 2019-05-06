@@ -8,7 +8,6 @@ module.exports = function override(config, env) {
       return new WorkboxWebpackPlugin.InjectManifest({
         swSrc: './src/sw.js',
         swDest: 'service-worker.js',
-        clientsClaim: true,
         skipWaiting: true,
         cleanupOutdatedCaches: true,
         runtimeCaching: [{
