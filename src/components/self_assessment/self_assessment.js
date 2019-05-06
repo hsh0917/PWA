@@ -27,8 +27,19 @@ class Self_assessment extends Component {
         <form className="needs-validation" novalidate onSubmit={this.submitForm.bind(this)}>
           <div className="form-group">
             <h2 className="mb-4">How are you today?</h2>
-            <div>
-            <FontAwesomeIcon icon={faFrown} style={{color: 'red'}}size="2x"/><FontAwesomeIcon icon={faMeh} size="2x" /><FontAwesomeIcon icon={faGrinBeam} style={{color:'green'}} size="2x" />
+            <div className="row">
+              <div className="col-3"></div>
+              <div className="col-9 emoji">
+                <div>
+                  <FontAwesomeIcon icon={faFrown} style={{color: 'red'}}size="2x"/>
+                </div>
+                <div>
+                  <FontAwesomeIcon icon={faMeh} size="2x" />
+                </div>
+                <div>
+                  <FontAwesomeIcon icon={faGrinBeam} style={{color:'green'}} size="2x" />    
+                </div>
+              </div>
             </div>
             <div className="row">
               <div className="col-3"><label>Gratitude</label></div>
