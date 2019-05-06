@@ -8,7 +8,6 @@ class Help extends Component {
       <div>
       <Navbar />
       <div className="help_container">
-        <div className="container">
           <div className="circle_div1">
             <a className="btn btn-primary btn-circle1 d-flex justify-content-center align-items-center" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Breathe
@@ -25,7 +24,6 @@ class Help extends Component {
             </a>
           </div>
         </div>
-      </div>
       </div>
     );
   }
