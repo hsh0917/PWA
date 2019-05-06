@@ -74,7 +74,7 @@ class Self_assessment extends Component {
               <textarea class="form-control" rows="3" id="comment"></textarea>
             </div>
             <div className="mt-3 selfAssessment_submit">
-              <input type="submit"/>
+              <input className="btn btn-primary" type="submit"/>
             </div>
           </div>
         </form>
