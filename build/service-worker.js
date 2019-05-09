@@ -1,4 +1,4 @@
-importScripts("https://toh-pwa-app.herokuapp.com/precache-manifest.b018cc48ce30e426283024dfee257135.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("http://localhost:5000/precache-manifest.9bda86a75c42c1634271a9c8f9e67346.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 self.addEventListener('install', function(event) {
   // The promise that skipWaiting() returns can be safely ignored.
