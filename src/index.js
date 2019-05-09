@@ -26,8 +26,5 @@ serviceWorker.register();
 // }
 
 serviceWorker.register({
-    onUpdate: registration => initWorkboxRefresh(registration, {
-        textContent: 'A new version of this app is available. Click here!',
-        className: 'btn btn-warning workbox-refresh animateOpen'
-    })
+    onUpdate: registration => initWorkboxRefresh(registration)
 });
