@@ -3,14 +3,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 87vh;
+    height: 86vh;
     position: relative;
+    overflow: scroll;
     background: url(https://res.cloudinary.com/ottawa-hospital-research-institute/image/upload/v1556033811/TOH_App/about.jpg)
     no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    @media screen and (max-width: $break-small) {
+        overflow: scroll;
+    }
     
     h1, h3{
         text-align: center;
@@ -45,6 +50,7 @@
 
     .btn{
         pointer: cursor;
+        width: 192px;
     }
     
 }

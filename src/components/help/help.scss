@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 82vh;
+        height: 78vh;
         position: relative;
         background: url(https://res.cloudinary.com/ottawa-hospital-research-institute/image/upload/v1556033811/TOH_App/about.jpg)
         no-repeat center center fixed;
@@ -19,6 +19,9 @@
         background-size: cover;
         @media screen and (min-width: $break-large) {
             height: 78vh;
+        }
+        @media screen and (min-width: 1800px) {
+            height: 80vh;
         }
 
     .circle_div1{

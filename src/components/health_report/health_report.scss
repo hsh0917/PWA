@@ -1,33 +1,45 @@
 .healthReport_container{
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 78vh; 
+
+    @media screen and (max-width: $break-small) {
+        overflow: scroll;
+    }
 
     h2{
         text-align: center;
-    }
-
-    .healthReport_chart h4{ 
-        text-align: left;
-        margin-bottom: -1.1rem;
-        margin-top: 10px;
         @media screen and (max-width: $break-small) {
+            font-size: 1.17em;
         }
-
     }
     
-    div{
+    .healthReport_achievement, .healthReport_chart, .healthReport_Recommendations{
         margin: 0 auto;
         width: 70%;
         @media screen and (max-width: $break-small) {
             width: 100%;            
         }
+
+        h4{ 
+            @media screen and (max-width: $break-small) {
+                text-align: left;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .healthReport_chart h4{
+        text-align: left;
+        margin-bottom: -1.1rem;
+        margin-top: 8px;
     }
 
     .healthchart_icon_happy{
         position: relative;
         top: 30px;
-        left: 18px;
+        left: -10px;
         @media screen and (max-width: $break-small) {
             left: 10px;
         }
@@ -38,10 +50,10 @@
     
     .healthchart_icon_sad{
         position: relative;
-        top: 174px;
-        left: -5px;
+        top: 130px;
+        left: -35px;
         @media screen and (max-width: $break-small) {
-            left: -12px;
+            left: -10px;
         }
         @media screen and (max-width: $break-smallMedium) {
             left: -14px;
@@ -54,5 +66,19 @@
             font-size: 1.3rem;
         }
     }
-    
+
+    .healthReport_achievement_icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid black;
+    }
+
+    .healthReport_Recommendations p{
+        @media screen and (max-width: $break-smallMedium) {
+            border: 1px solid black;
+            overflow-y: auto;
+            height: 90px;
+        }
+    }
 }

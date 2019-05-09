@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft} from '@fortawesome/free-solid-svg-icons';
+import { withRouter } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -7,23 +10,25 @@ class Navbar extends Component {
       <div>
         <nav className="navbar navbar-expand-sm bg-ohri navbar-dark justify-content-end">
           <div className="container">
-          <a className="navbar-brand" href="#">
-            TOH Resiliency App
-          </a>
+          <NavLink to="/Main_menu">     
+            <p className="mainBtn">
+            <FontAwesomeIcon icon={faChevronLeft} size="1x"/> Main Menu
+            </p>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#collapsibleNavbar"
           >
-            <span className="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon"  />
           </button>
           <div className="collapse navbar-collapse flex-grow-0" id="collapsibleNavbar">
             <ul className="navbar-nav text-right">
-              <li className="nav-item">
+              <li className="nav-item">  
                 <NavLink to="/self_assessment"><a className="nav-link">
-                  Self-Assessment 
-                </a>
+                  Self-Assessment  
+                </a>   
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -49,4 +54,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

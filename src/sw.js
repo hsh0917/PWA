@@ -1,12 +1,21 @@
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
+self.addEventListener('install', function(event) {
+  // The promise that skipWaiting() returns can be safely ignored.
+  self.skipWaiting();
+  window.location.reload();
+  // Perform any other actions required for your
+  // service worker to install, potentially inside
+  // of event.waitUntil();
 });
+
+self.addEventListener('message', function handleSkipWaiting(event) {
+  if (event.data === 'skipWaiting') { self.skipWaiting(); window.location.reload();}
+});
+
+workbox.core.clientsClaim();
 
 workbox.routing.registerRoute(
   new RegExp('https:.*min\.(css|js|html)'),
-  workbox.strategies.staleWhileRevalidate({
+  workbox.strategies.networkFirst({
       cacheName: 'CDN'
     }),
 );
@@ -14,22 +23,16 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /.*\.(?:png|jpg|jpeg|svg|gif)/g,
   workbox.strategies.networkFirst({
-    cacheName: "images"
-  })
-);
-
-  workbox.routing.registerRoute(
-  /\.(?:js|jsx)$/,
-  workbox.strategies.networkFirst({
-    cacheName: "javascripts"
-  })
-);
-
-workbox.routing.registerRoute(
-  /.*\.css/,
-  workbox.strategies.networkFirst({
-    cacheName: "css-cache"
+    cacheName: "images",
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 24 * 60 * 60,
+        maxEntries: 30,
+      }),
+    ],
+ 
   })
 );
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
+

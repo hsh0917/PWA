@@ -24,7 +24,7 @@ class Self_assessment extends Component {
       <div>
         <Navbar />
       <div className="container selfAssessment_container">
-        <form className="needs-validation" novalidate onSubmit={this.submitForm.bind(this)}>
+        <form className="needs-validation" noValidate onSubmit={this.submitForm.bind(this)}>
           <div className="form-group">
             <h2 className="mb-4">How are you today?</h2>
             <div className="row">
@@ -69,9 +69,9 @@ class Self_assessment extends Component {
               <div className="col-3"><label>Physical Symptoms</label></div>
               <div className="col-9 last"><Slider dots step={20} defaultValue={0} /></div>
             </div>
-            <div className="mt-5">
-              <label for="comment">Notes (optional)</label>
-              <textarea class="form-control" rows="3" id="comment"></textarea>
+            <div className="mt-3">
+              <label htmlFor="comment">Notes (optional)</label>
+              <textarea className="form-control" rows="2" id="comment"></textarea>
             </div>
             <div className="mt-3 selfAssessment_submit">
               <input className="btn btn-primary" type="submit"/>

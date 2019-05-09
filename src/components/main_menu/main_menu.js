@@ -12,9 +12,9 @@ class Menu extends Component {
           <h3>We have created an account for you</h3>
           <h3>You can start by selecting an option below</h3>
           <Link to="/self_assessment" className="btn btn-primary">
-          Begin a self assessment
+            Begin a self assessment
           </Link>
-          <Link to="/help" activeStyle={{ color: 'red' }} className="btn btn-primary">
+          <Link to="/help" Style={{ color: 'red' }} className="btn btn-primary">
             Get help right now
           </Link>
           <Link to="/resiliency_resources" className="btn btn-primary">

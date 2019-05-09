@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 87vh;
+    height: 86vh;
     position: relative;
     background: url(https://res.cloudinary.com/ottawa-hospital-research-institute/image/upload/v1556033811/TOH_App/about.jpg)
     no-repeat center center fixed;
@@ -15,6 +15,11 @@
     h1, h3{
         text-align: center;
         color: #f5f5f5;
+    }
+    h3{
+        @media screen and (max-width: 568px) {
+            margin: 12px auto;
+        }
     }
 
     .login_centered{
@@ -33,6 +38,12 @@
         .btn {
             @media screen and (max-height: 800px) {
                 margin-top: 15px;
+                width: 205px;
+            }
+        }
+        .btn-warning{
+            @media screen and (max-height: 800px) {
+                margin-bottom: 20px;
             }
         }
     }

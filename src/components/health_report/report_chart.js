@@ -32,14 +32,14 @@ class CustomizedDot extends Component {
 class SimpleLineChart extends Component {
 	render () {
   	return (
-        <ResponsiveContainer width="90%" height={230}>
+        <ResponsiveContainer width="100%" height={180}>
             <LineChart data={data} 
                 margin={{top: 5, right: 30, left: 20, bottom: 5}}>
             <CartesianGrid strokeDasharray="3 3"/>
             <XAxis dataKey="name"/>
             <Tooltip/>
             <Legend />
-            <Line type="monotone" dataKey="Avg" stroke="#8884d8" dot={<CustomizedDot />}/>
+            <Line type="monotone" dataKey="Avg" stroke="#8884d8"/>
             <Line type="monotone" dataKey="Sleep" stroke="#82ca9d" />
             <Line type="monotone" dataKey="Health" stroke="#adff2f" />
             </LineChart>

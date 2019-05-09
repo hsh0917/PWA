@@ -4,6 +4,11 @@
     height: 78vh;
     margin-bottom: 15px;
     display:block;
+    margin-bottom: 0;
+    
+    @media screen and (min-width: 1800px) {
+        height: 80vh;
+    }
 
     @media screen and (max-width: 630px) {
         overflow: scroll;
@@ -21,10 +26,16 @@
         max-width: 15%;
         text-align: right;
         
-        @media screen and (max-width: $break-small) {
+        @media screen and (max-width: $break-small)  {
+        font-size: 16px;
         max-width: 25%;            
+        text-align: left;
         }
         
+        @media screen and (max-width: 320px) {
+            font-size: 0.8rem;
+        }
+
         label{
             margin: 0;
         }
