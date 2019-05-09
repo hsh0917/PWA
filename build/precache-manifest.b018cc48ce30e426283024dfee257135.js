@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "142ad215266423e4a846bb9068c81606",
+    "revision": "ccabe74cf508934b53dd250d77ed78d3",
     "url": "https://toh-pwa-app.herokuapp.com/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://toh-pwa-app.herokuapp.com/static/css/2.b4c5b390.chunk.css"
   },
   {
-    "revision": "77b61c7343d2281b4293",
-    "url": "https://toh-pwa-app.herokuapp.com/static/css/main.d396ee97.chunk.css"
+    "revision": "132b2dbefa5570fe9cde",
+    "url": "https://toh-pwa-app.herokuapp.com/static/css/main.0e0ff9e2.chunk.css"
   },
   {
     "revision": "7ab4daf0d5ae9374f5b0",
     "url": "https://toh-pwa-app.herokuapp.com/static/js/2.f102575c.chunk.js"
   },
   {
-    "revision": "77b61c7343d2281b4293",
-    "url": "https://toh-pwa-app.herokuapp.com/static/js/main.2b2552f4.chunk.js"
+    "revision": "132b2dbefa5570fe9cde",
+    "url": "https://toh-pwa-app.herokuapp.com/static/js/main.829ec974.chunk.js"
   },
   {
     "revision": "cfe1eaa4b4561d1f458c",

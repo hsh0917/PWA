@@ -4,6 +4,7 @@ footer{
     background-color: #fff;
     text-align: center;
     line-height: 10vh;
+    clear:both;
     .container{
         vertical-align: middle;
     }
@@ -12,7 +13,6 @@ footer{
         bottom: auto;
         height: 12vh;
         line-height: 8vh;
-
     }
     
     h5{
@@ -24,7 +24,7 @@ footer{
         @media screen and (max-width: $break-small) {
         padding-top: 5px;
         padding-bottom: 5px;
-        }    
+        }
     }
     
     img.toh_logo{

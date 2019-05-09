@@ -7,8 +7,10 @@ class Footer extends Component {
       <div>
         <footer className="footer">
           <div className="container">
-            <h6>Developed by OHRI</h6>
-            <img className="toh_logo" alt="logo" title="toh logo" src="https://res.cloudinary.com/ottawa-hospital-research-institute/image/upload/v1556026839/TOH_App/Ottawa_Hospital_Research_Institute_Horizontal_Colour.png" />
+            <div>
+              <h6>Developed by OHRI</h6>
+              <img className="toh_logo" alt="logo" title="toh logo" src="https://res.cloudinary.com/ottawa-hospital-research-institute/image/upload/v1556026839/TOH_App/Ottawa_Hospital_Research_Institute_Horizontal_Colour.png" />
+            </div>
           </div>
         </footer>
       </div>
